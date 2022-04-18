@@ -59,7 +59,7 @@ The root LDB directory should be located in /var/lib
 ```tree -d /var/lib/ldb/
 /var/lib/ldb/
 └── oss
-    ├── component
+    ├── url
     ├── file
     └── wfp
 ```
