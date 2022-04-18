@@ -76,24 +76,36 @@ Download a component and scan it entirely:
 
 ```
 wget https://github.com/phpspec/prophecy/archive/v1.5.0.tar.gz
-scanoss v1.5.0.tar.gz
+scanoss v1.5.0.tar.gz | jq
 {
   "v1.5.0.tar.gz": [
     {
-      "id": "component",
-      "elapsed": "0.000081s",
+      "id": "file",
+      "status": "pending",
       "lines": "all",
       "oss_lines": "all",
       "matched": "100%",
+      "purl": [
+        "pkg:github/phpspec/prophecy"
+      ],
       "vendor": "phpspec",
       "component": "prophecy",
       "version": "1.5.0",
       "latest": "1.5.0",
-      "url": "https://github.com/phpspec/prophecy/archive/v1.5.0.tar.gz",
-      "file": "all",
-      "size": "N/A",
-      "dependencies": [],
-      "licenses": []
+      "url": "https://github.com/phpspec/prophecy",
+      "release_date": "2015-08-13",
+      "file": "v1.5.0.tar.gz",
+      "url_hash": "0092c636449ac512feba8345a196478c",
+      "file_hash": "0092c636449ac512feba8345a196478c",
+      "source_hash": "0092c636449ac512feba8345a196478c",
+      "file_url": "https://github.com/phpspec/prophecy/archive/v1.5.0.tar.gz",
+      "server": {
+        "version": "4.5.0",
+        "kb_version": {
+          "monthly": "22.01",
+          "daily": "22.01.01"
+        }
+      }
     }
   ]
 }
@@ -105,24 +117,36 @@ Expand the component and pick a file to scan:
 
 ```
 tar -zxf v1.5.0.tar.gz 
-scanoss prophecy-1.5.0/src/Prophecy/Util/ExportUtil.php 
+scanoss prophecy-1.5.0/src/Prophecy/Util/ExportUtil.php | jq
 {
   "prophecy-1.5.0/src/Prophecy/Util/ExportUtil.php": [
     {
       "id": "file",
-      "elapsed": "0.000079s",
+      "status": "pending",
       "lines": "all",
       "oss_lines": "all",
       "matched": "100%",
+      "purl": [
+        "pkg:github/phpspec/prophecy"
+      ],
       "vendor": "phpspec",
       "component": "prophecy",
       "version": "1.5.0",
       "latest": "1.5.0",
-      "url": "https://github.com/phpspec/prophecy/archive/v1.5.0.tar.gz",
-      "file": "prophecy-1.5.0/src/Prophecy/Util/ExportUtil.php",
-      "size": "6020",
-      "dependencies": [],
-      "licenses": []
+      "url": "https://github.com/phpspec/prophecy",
+      "release_date": "2015-08-13",
+      "file": "src/Prophecy/Util/ExportUtil.php",
+      "url_hash": "0092c636449ac512feba8345a196478c",
+      "file_hash": "e490bd70fde393e9d87770da3d631358",
+      "source_hash": "e490bd70fde393e9d87770da3d631358",
+      "file_url": "https://osskb.org/api/file_contents/e490bd70fde393e9d87770da3d631358",
+      "server": {
+        "version": "4.5.0",
+        "kb_version": {
+          "monthly": "22.01",
+          "daily": "22.01.01"
+        }
+      }
     }
   ]
 }
@@ -134,24 +158,36 @@ Just appending a LF to a file will produce a no match on the entire file, which 
 
 ```
 echo -e \n >> prophecy-1.5.0/src/Prophecy/Util/StringUtil.php
-scanoss prophecy-1.5.0/src/Prophecy/Util/StringUtil.php
+scanoss prophecy-1.5.0/src/Prophecy/Util/StringUtil.php | jq
 {
   "prophecy-1.5.0/src/Prophecy/Util/StringUtil.php": [
     {
       "id": "snippet",
-      "elapsed": "0.001328s",
+      "status": "pending",
       "lines": "1-85",
       "oss_lines": "1-85",
       "matched": "98%",
+      "purl": [
+        "pkg:github/phpspec/prophecy"
+      ],
       "vendor": "phpspec",
       "component": "prophecy",
-      "version": "1.5.0",
-      "latest": "1.5.0",
-      "url": "https://github.com/phpspec/prophecy/archive/v1.5.0.tar.gz",
-      "file": "prophecy-1.5.0/src/Prophecy/Util/StringUtil.php",
-      "size": "2540",
-      "dependencies": [],
-      "licenses": []
+      "version": "1.10.0",
+      "latest": "1.10.0",
+      "url": "https://github.com/phpspec/prophecy",
+      "release_date": "2019-12-17",
+      "file": "src/Prophecy/Util/StringUtil.php",
+      "url_hash": "5bb10a12d3755d82edbcea4308c37d54",
+      "file_hash": "201cdcb4700db4d4c7880b14880d6a41",
+      "source_hash": "9e75d7ef2e91fe71664f1b1d027b150e",
+      "file_url": "https://osskb.org/api/file_contents/201cdcb4700db4d4c7880b14880d6a41",
+      "server": {
+        "version": "4.5.0",
+        "kb_version": {
+          "monthly": "22.01",
+          "daily": "22.01.01"
+        }
+      }
     }
   ]
 }
