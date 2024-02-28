@@ -1,0 +1,28 @@
+---
+name: "publish"
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    name: "Publish Package"
+    runs-on: ubuntu-20.04
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Join splitted files
+        run: cat ldb/ldb.tar.xz_a* > ldb.tar.xz
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: ldb.tar.xz
+          
